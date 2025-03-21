@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blogs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --pnc-green: #006F3D; /* Main Green */
+            --pnc-dark-green: #004B23;
+            --pnc-light-green: #4C9F70;
+            --pnc-accent: #FFD100;
+            --pnc-white: #ffffff;
+        }
+
+        /* Background Image */
+    body {
+    background: url('../WebTech_Project/photos/dp.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures full coverage */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--pnc-white); /* Ensure text is readable */
+    }
+
+
+        .navbar-toggler {
+            background-color: var(--pnc-light-green);
+        }
+
+        /* Blog Card */
+        .news-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            background-color: var(--pnc-white); /* Keep card readable */
+            color: black;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .news-card img {
+    width: 100%;  /* Ensures image spans the full width of the card */
+    height: 200px; /* Sets a fixed height */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-top-left-radius: 5px; /* Optional: Smooth corners */
+    border-top-right-radius: 5px;
+}
+
+        .card-title {
+            color: var(--pnc-dark-green);
+            font-weight: bold;
+        }
+
+        .card-btn {
+            background-color: var(--pnc-light-green);
+            border: none;
+            transition: all 0.3s;
+            color: white;
+        }
+
+        .card-btn:hover {
+            background-color: var(--pnc-dark-green);
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--pnc-dark-green);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .navbar {
+    background-color: var(--pnc-green) !important;
+        }
+        .navbar-nav .nav-link {
+            font-family: 'Open Sans' !important;
+            font-size: 2rem; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            padding: 10px 15px; /* Add some padding */
+}
+
+
+    </style>
+</head>
+<body>
+
+<header class="text-white text-center py-4" style="background-color: var(--pnc-green); ">
+    <h1>Welcome to PNC Blogs</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--pnc-green);">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            
+            <!-- First Blog Post -->
+            <article class="news-card card">
+                <img src="../WebTech_Project/photos/image.png" class="card-img-top" alt="First Blog Image">
+                <div class="card-body">
+                    <h2 class="card-title">𝐒𝐚𝐢𝐥𝐢𝐧𝐠 𝐁𝐞𝐲𝐨𝐧𝐝 𝐭𝐡𝐞 𝐇𝐨𝐫𝐢𝐳𝐨𝐧𝐬: 𝐏𝐍𝐂 (𝐔𝐂) - 𝐉𝐏𝐈𝐀’𝐬 𝐒𝐩𝐢𝐫𝐢𝐭 𝐋𝐢𝐯𝐞𝐬 𝐎𝐧! ⚓️</h2>
+                    <p class="text-muted">Published on March 21, 2025</p>
+                    <p>𝐒𝐚𝐢𝐥𝐢𝐧𝐠 𝐁𝐞𝐲𝐨𝐧𝐝 𝐭𝐡𝐞 𝐇𝐨𝐫𝐢𝐳𝐨𝐧𝐬: 𝐏𝐍𝐂 (𝐔𝐂) - 𝐉𝐏𝐈𝐀’𝐬 𝐒𝐩𝐢𝐫𝐢𝐭 𝐋𝐢𝐯𝐞𝐬 𝐎𝐧! ⚓️</p>
+                    <a href="https://www.facebook.com/share/p/1BuFmWSUbo/" class="btn card-btn">Read more</a>
+                </div>
+            </article>
+
+            <!-- Second Blog Post -->
+            <article class="news-card card">
+                <img src="../WebTech_Project/photos/Blog2.jpg" class="card-img-top" alt="Second Blog Image">
+                <div class="card-body">
+                    <h2 class="card-title">📢𝐄𝐚𝐫𝐭𝐡𝐪𝐮𝐚𝐤𝐞 𝐒𝐚𝐟𝐞𝐭𝐲 𝐆𝐮𝐢𝐝𝐞: 𝐖𝐡𝐚𝐭 𝐭𝐨 𝐃𝐨 𝐁𝐞𝐟𝐨𝐫𝐞, 𝐃𝐮𝐫𝐢𝐧𝐠, 𝐚𝐧𝐝 𝐀𝐟𝐭𝐞𝐫 </h2>
+                    <p class="text-muted">Published on March 20, 2025</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel nulla id libero tincidunt ultrices...</p>
+                    <a href="https://www.facebook.com/share/p/16HKguazVv/" class="btn card-btn">Read more</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Blog. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
