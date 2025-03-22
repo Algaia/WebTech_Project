@@ -290,3 +290,15 @@
         .animate-up:hover {
             transform: translateY(-10px);
         }
+        
+        /* contact us*/
+        .contactBG {
+          background-color: #006F3D;
+        }
+
+
+        .btn-danger{
+          background-color: #004B23;
+        }
+
+
