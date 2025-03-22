@@ -3,40 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blogs</title>
+    <title>PNC Blogs</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
     <style>
         :root {
-            --pnc-green: #006F3D; /* Main Green */
-            --pnc-dark-green: #004B23;
-            --pnc-light-green: #4C9F70;
-            --pnc-accent: #FFD100;
-            --pnc-white: #ffffff;
+            --pnc-green: #07522c;
+            --pnc-secondary: #275e8f; 
         }
 
-        /* Background Image */
-    body {
-    background: url('../WebTech_Project/photos/dp.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures full coverage */
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: var(--pnc-white); /* Ensure text is readable */
-    }
-
-
-        .navbar-toggler {
-            background-color: var(--pnc-light-green);
+        .bg-green {
+            background-color: var(--pnc-green);
         }
 
-        /* Blog Card */
+        .bg-secondary {
+            background-color: var(--pnc-secondary);
+        }
+        #banner {
+          background-color: var(--pnc-green) !important;
+        }
+
         .news-card {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             margin-bottom: 30px;
             border: none;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             overflow: hidden;
-            background-color: var(--pnc-white); /* Keep card readable */
-            color: black;
         }
 
         .news-card:hover {
@@ -45,105 +38,138 @@
         }
 
         .news-card img {
-    width: 100%;  /* Ensures image spans the full width of the card */
-    height: 200px; /* Sets a fixed height */
-    object-fit: cover; /* Ensures the image fills the space without distortion */
-    border-top-left-radius: 5px; /* Optional: Smooth corners */
-    border-top-right-radius: 5px;
-}
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
 
-        .card-title {
-            color: var(--pnc-dark-green);
+        .card-date {
+            color: var(--pnc-green);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--pnc-green);
             font-weight: bold;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
         }
 
-        .card-btn {
-            background-color: var(--pnc-light-green);
-            border: none;
-            transition: all 0.3s;
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: var(--pnc-secondary);
+        }
+
+        .footer {
+            background-color: var(--pnc-green);
             color: white;
+            padding: 40px 0 0;
         }
 
-        .card-btn:hover {
-            background-color: var(--pnc-dark-green);
-            transform: translateX(5px);
+        .footer-bottom {
+            background-color: rgba(0,0,0,0.2);
+            padding: 15px 0;
+            margin-top: 30px;
         }
-
-        /* Footer */
-        footer {
-            background-color: var(--pnc-dark-green);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .navbar {
-    background-color: var(--pnc-green) !important;
-        }
-        .navbar-nav .nav-link {
-            font-family: 'Open Sans' !important;
-            font-size: 2rem; /* Increase font size */
-            font-weight: bold; /* Make it bold */
-            padding: 10px 15px; /* Add some padding */
-}
-
-
     </style>
 </head>
 <body>
-
-<header class="text-white text-center py-4" style="background-color: var(--pnc-green); ">
-    <h1>Welcome to PNC Blogs</h1>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--pnc-green);">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light pt-4">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#" style="width: 50;">
+                <img src="photos/pnc (1).png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-4">
+                        <a class="nav-link active fs-5" aria-current="page" href="home.html" style="color: rgb(7, 82, 44);"><strong>HOME</strong></a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active fs-5" aria-current="page" href="home.html#about" style="color: rgb(7, 82, 44);"><strong>ABOUT</strong></a>
+                    </li>  
+                    <li class="nav-item me-4">
+                        <a class="nav-link active fs-5" aria-current="page" href="home.html#courses" style="color: rgb(7, 82, 44);"><strong>COURSES</strong></a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active fs-5" aria-current="page" href="blog.html" style="color: rgb(7, 82, 44);"><strong>BLOG</strong></a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active fs-5" aria-current="page" href="home.html#contact" style="color: rgb(7, 82, 44);"><strong>CONTACT</strong></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-</header>
+    <!-- NAVBAR END -->
 
-<main class="container my-4">
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            
-            <!-- First Blog Post -->
-            <article class="news-card card">
-                <img src="photos/image.png" class="card-img-top" alt="First Blog Image">
-                <div class="card-body">
-                    <h2 class="card-title">𝐒𝐚𝐢𝐥𝐢𝐧𝐠 𝐁𝐞𝐲𝐨𝐧𝐝 𝐭𝐡𝐞 𝐇𝐨𝐫𝐢𝐳𝐨𝐧𝐬: 𝐏𝐍𝐂 (𝐔𝐂) - 𝐉𝐏𝐈𝐀’𝐬 𝐒𝐩𝐢𝐫𝐢𝐭 𝐋𝐢𝐯𝐞𝐬 𝐎𝐧! ⚓️</h2>
-                    <p class="text-muted">Published on March 21, 2025</p>
-                    <p>𝐒𝐚𝐢𝐥𝐢𝐧𝐠 𝐁𝐞𝐲𝐨𝐧𝐝 𝐭𝐡𝐞 𝐇𝐨𝐫𝐢𝐳𝐨𝐧𝐬: 𝐏𝐍𝐂 (𝐔𝐂) - 𝐉𝐏𝐈𝐀’𝐬 𝐒𝐩𝐢𝐫𝐢𝐭 𝐋𝐢𝐯𝐞𝐬 𝐎𝐧! ⚓️</p>
-                    <a href="https://www.facebook.com/share/p/1BuFmWSUbo/" class="btn card-btn">Read more</a>
-                </div>
-            </article>
-
-            <!-- Second Blog Post -->
-            <article class="news-card card">
-                <img src="photos/Blog2.jpg" class="card-img-top" alt="Second Blog Image">
-                <div class="card-body">
-                    <h2 class="card-title">📢𝐄𝐚𝐫𝐭𝐡𝐪𝐮𝐚𝐤𝐞 𝐒𝐚𝐟𝐞𝐭𝐲 𝐆𝐮𝐢𝐝𝐞: 𝐖𝐡𝐚𝐭 𝐭𝐨 𝐃𝐨 𝐁𝐞𝐟𝐨𝐫𝐞, 𝐃𝐮𝐫𝐢𝐧𝐠, 𝐚𝐧𝐝 𝐀𝐟𝐭𝐞𝐫 </h2>
-                    <p class="text-muted">Published on March 20, 2025</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel nulla id libero tincidunt ultrices...</p>
-                    <a href="https://www.facebook.com/share/p/16HKguazVv/" class="btn card-btn">Read more</a>
-                </div>
-            </article>
-
+    <!-- Hero Banner -->
+    <div id="banner" class="bg-secondary p-4 p-md-5 text-white text-center">
+        <div class="container py-3">
+            <h1 class="fw-bold">PNC Blogs</h1>
+            <p class="lead">Stay updated with the latest news and events at Pamantasan ng Cabuyao</p>
         </div>
     </div>
-</main>
 
-<footer>
-    <p>&copy; 2025 My Blog. All Rights Reserved.</p>
-</footer>
+    <!-- Blog Posts Section -->
+    <section class="container mt-5 py-5">
+        <h2 class="text-center section-title">Latest Articles</h2>
+        <div class="row justify-content-center">
+            <!-- First Blog Post -->
+            <div class="col-lg-5 mb-4 mx-3">
+                <div class="card news-card">
+                    <img src="photos/image.png" class="card-img-top" alt="First Blog Image">
+                    <div class="card-body">
+                        <div class="card-date"><i class="far fa-calendar-alt"></i> March 21, 2025</div>
+                        <h5 class="card-title">𝐒𝐚𝐢𝐥𝐢𝐧𝐠 𝐁𝐞𝐲𝐨𝐧𝐝 𝐭𝐡𝐞 𝐇𝐨𝐫𝐢𝐳𝐨𝐧𝐬: 𝐏𝐍𝐂 (𝐔𝐂) - 𝐉𝐏𝐈𝐀'𝐬 𝐒𝐩𝐢𝐫𝐢𝐭 𝐋𝐢𝐯𝐞𝐬 𝐎𝐧! ⚓️</h5>
+                        <p class="card-text">Experience the journey as PNC students navigate beyond the horizon, embodying the spirit of adventure and academic excellence in this inspiring report.</p>
+                        <a href="https://www.facebook.com/share/p/1BuFmWSUbo/" class="btn btn-success">Read More</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Second Blog Post -->
+            <div class="col-lg-5 mb-4 mx-3">
+                <div class="card news-card">
+                    <img src="photos/Blog2.jpg" class="card-img-top" alt="Second Blog Image">
+                    <div class="card-body">
+                        <div class="card-date"><i class="far fa-calendar-alt"></i> March 20, 2025</div>
+                        <h5 class="card-title">📢 𝐄𝐚𝐫𝐭𝐡𝐪𝐮𝐚𝐤𝐞 𝐒𝐚𝐟𝐞𝐭𝐲 𝐆𝐮𝐢𝐝𝐞: 𝐖𝐡𝐚𝐭 𝐭𝐨 𝐃𝐨 𝐁𝐞𝐟𝐨𝐫𝐞, 𝐃𝐮𝐫𝐢𝐧𝐠, 𝐚𝐧𝐝 𝐀𝐟𝐭𝐞𝐫</h5>
+                        <p class="card-text">Essential guidance on how to prepare for, respond during, and recover after an earthquake. Learn the critical safety measures that could save lives.</p>
+                        <a href="https://www.facebook.com/share/p/16HKguazVv/" class="btn btn-success">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="photos/PNC.png" alt="" width="60px" height="60px">
+                    <p><br>Pamantasan ng Cabuyao is committed to providing world-class education with a focus on leadership, innovation, and service.</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 Pamantasan ng Cabuyao. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
