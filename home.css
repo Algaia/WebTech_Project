@@ -10,7 +10,11 @@
           color: black;
         }
   
-  
+        .bg-red{
+            background-color: red;
+            color: white;
+        }
+        
         .navbar-toggler{
           background-color: #4C9F70;
         }
@@ -300,5 +304,12 @@
         .btn-danger{
           background-color: #004B23;
         }
+
+        .modal-header{
+            background-color: #146d3b;
+            color: white;
+        }
+        
+        
 
 
