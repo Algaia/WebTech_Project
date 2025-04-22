@@ -273,31 +273,52 @@
             <form class="row g-3">
               <div class="col-md-6">
                 <label for="firstName" class="form-label text-white">First Name</label>
-                <input type="text" class="form-control" id="firstName" required>
+                <input type="text" class="form-control" id="firstName" required placeholder="First name">
               </div>
               <div class="col-md-6">
                 <label for="lastName" class="form-label text-white">Last Name</label>
-                <input type="text" class="form-control" id="lastName" required>
+                <input type="text" class="form-control" id="lastName" required placeholder="Last name">
               </div>
               <div class="col-md-8">
                 <label for="emailInfo" class="form-label text-white">E-mail</label>
-                <input type="email" class="form-control" id="emailInfo" required>
+                <input type="email" class="form-control" id="emailInfo" required placeholder="Email">
               </div>
               <div class="col-md-4">
                 <label for="phoneNumber" class="form-label text-white">Phone Number</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="+639217871891">
+                <input type="text" class="form-control" id="phoneNumber" placeholder="ex.09915718759" style="font-style: italic;">
               </div>
               <div class="col-md-12">
                 <label for="message" class="form-label text-white">Message</label>
                 <textarea class="form-control" id="message" rows="5" required></textarea>
               </div>
               <!--Button Bootstrap-->
-              <div class="buttonContact col-md-12 text-white">
-                <button type="submit" class="btn btn-danger">Submit</button>
-              </div>
+              
+                <!-- Button trigger modal -->
+                
+<button type="button" class="btn btn-primary col-md-12 text-white w-25" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Submit
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">UC(PNC)</h5>
+      </div>
+      <div class="modal-body">
+         Thankyou for your submission! We will get back to you shortly.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
             </form>
           </div>
         </div>
+
 
         <!-- Footer -->
         <!-- Grid Bootstrap -->
